@@ -25,3 +25,18 @@ module "sandbox" {
 
   account_customizations_name = "sandbox"
 }
+
+module "sandbox2" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "dcmedley+betasandbox2@amazon.com"
+    AccountName               = "sandboxTwo"
+    ManagedOrganizationalUnit = "Sandbox"
+    SSOUserEmail              = "dcmedley+betasandbox2@amazon.com"
+    SSOUserFirstName          = "Dave"
+    SSOUserLastName           = "Medley"
+  }
+
+  account_customizations_name = "sandbox2"
+}
