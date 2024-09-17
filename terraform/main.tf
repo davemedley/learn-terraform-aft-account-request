@@ -37,6 +37,18 @@ module "sandbox2" {
     SSOUserFirstName          = "Dave"
     SSOUserLastName           = "Medley"
   }
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Dave"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
 
   account_customizations_name = "sandbox2"
 }
